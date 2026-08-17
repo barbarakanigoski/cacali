@@ -24,21 +24,21 @@ export default function ListaPage() {
   return (
     <div className="pt-32 pb-24 min-h-screen flex items-center">
       <div className="max-w-xl mx-auto px-6 text-center">
-        <h1 className="font-display text-5xl md:text-6xl font-light text-burgundy">
-          as pecas estao no forno.
+        <h1 className="font-display text-5xl md:text-6xl font-light text-marrom">
+          as peças estão no forno.
         </h1>
-        <p className="text-burgundy/50 mt-6 max-w-md mx-auto">
-          a cacali produz em pequenos lotes. quando acaba, fica vazia ate a
-          proxima fornada.
+        <p className="text-marrom/50 mt-6 max-w-md mx-auto">
+          a cacali produz em pequenos lotes. quando acaba, fica vazia até a
+          próxima fornada.
         </p>
 
         {submitted ? (
           <div className="mt-12 space-y-4">
-            <p className="font-display text-2xl font-light text-burgundy">
-              voce esta na lista.
+            <p className="font-display text-2xl font-light text-marrom">
+              você esta na lista.
             </p>
-            <p className="text-burgundy/50 text-sm">
-              aviso voce antes de todo mundo — prometo.
+            <p className="text-marrom/50 text-sm">
+              aviso você antes de todo mundo — prometo.
             </p>
           </div>
         ) : (
@@ -51,19 +51,19 @@ export default function ListaPage() {
               type="email"
               required
               placeholder="seu e-mail"
-              className="flex-1 bg-white border border-burgundy/10 rounded-full px-6 py-3 text-burgundy text-sm focus:outline-none focus:border-fucsia/50 transition-colors"
+              className="flex-1 bg-white border border-marrom/10 rounded-full px-6 py-3 text-marrom text-sm focus:outline-none focus:border-pink/50 transition-colors"
             />
             <button
               type="submit"
-              className="bg-burgundy text-creme px-8 py-3 text-sm tracking-wide hover:bg-fucsia transition-colors rounded-full whitespace-nowrap"
+              className="bg-marrom text-creme px-8 py-3 text-sm tracking-wide hover:bg-pink transition-colors rounded-full whitespace-nowrap"
             >
               quero saber
             </button>
           </form>
         )}
 
-        <p className="text-xs text-burgundy/30 mt-6">
-          sem spam. so ceramica. prometido.
+        <p className="text-xs text-marrom/30 mt-6">
+          sem spam. só cerâmica. prometido.
         </p>
 
         <div className="mt-12">
@@ -71,7 +71,7 @@ export default function ListaPage() {
             href="https://instagram.com/cacali.ceramica"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-burgundy/50 hover:text-fucsia transition-colors"
+            className="text-sm text-marrom/50 hover:text-pink transition-colors"
           >
             ou aparece no instagram — e la que a gente avisa primeiro.
           </a>

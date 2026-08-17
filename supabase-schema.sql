@@ -61,6 +61,47 @@ create policy "Anyone can join waitlist"
 create policy "Anyone can send contact"
   on contacts for insert with check (true);
 
+-- Hero slides
+create table hero_slides (
+  id uuid default gen_random_uuid() primary key,
+  title text not null,
+  highlight text not null,
+  subtitle text not null,
+  cta_text text default 'ver as peças',
+  cta_link text default '/pecas',
+  bg_image text default '',
+  "order" integer default 0,
+  created_at timestamp with time zone default now()
+);
+
+alter table hero_slides enable row level security;
+create policy "Hero slides viewable by everyone"
+  on hero_slides for select using (true);
+create policy "Hero slides managed by authenticated"
+  on hero_slides for all using (auth.role() = 'authenticated');
+
+-- Site config (texts, settings)
+create table site_config (
+  key text primary key,
+  value text not null,
+  updated_at timestamp with time zone default now()
+);
+
+alter table site_config enable row level security;
+create policy "Site config viewable by everyone"
+  on site_config for select using (true);
+create policy "Site config managed by authenticated"
+  on site_config for all using (auth.role() = 'authenticated');
+
+-- Storage bucket for images
+insert into storage.buckets (id, name, public) values ('images', 'images', true)
+on conflict do nothing;
+
+create policy "Anyone can view images"
+  on storage.objects for select using (bucket_id = 'images');
+create policy "Authenticated can upload images"
+  on storage.objects for insert with check (bucket_id = 'images' and auth.role() = 'authenticated');
+
 -- Service role only for orders and product updates
 create policy "Service role manages orders"
   on orders for all using (true);

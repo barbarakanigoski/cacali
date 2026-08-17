@@ -26,9 +26,9 @@ export async function POST(request: NextRequest) {
           })
         ),
         back_urls: {
-          success: `${siteUrl}/pecas?status=success`,
-          failure: `${siteUrl}/pecas?status=failure`,
-          pending: `${siteUrl}/pecas?status=pending`,
+          success: `${siteUrl}/peças?status=success`,
+          failure: `${siteUrl}/peças?status=failure`,
+          pending: `${siteUrl}/peças?status=pending`,
         },
         auto_return: "approved",
         notification_url: `${siteUrl}/api/mercadopago-webhook`,

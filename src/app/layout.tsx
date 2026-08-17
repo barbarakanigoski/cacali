@@ -1,36 +1,29 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans, Dekko } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { AuthProvider } from "@/components/layout/AuthProvider";
+import { SmoothScroll } from "@/components/animations/SmoothScroll";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
 });
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
-
-const dekko = Dekko({
-  variable: "--font-dekko",
-  subsets: ["latin"],
-  weight: "400",
-});
-
 export const metadata: Metadata = {
-  title: "cacali - ceramica autoral por barbara kanigoski",
+  title: "cacali - cerâmica autoral por barbara kanigoski",
   description:
-    "ceramica autoral feita a mao. cada peca e unica — como quem a recebe.",
+    "cerâmica autoral feita a mão. cada peça e única — como quem a recebe.",
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
-    title: "cacali - ceramica autoral",
+    title: "cacali - cerâmica autoral",
     description:
-      "ceramica autoral feita a mao. cada peca e unica — como quem a recebe.",
+      "cerâmica autoral feita a mão. cada peça e única — como quem a recebe.",
     type: "website",
   },
 };
@@ -41,14 +34,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="pt-BR"
-      className={`${cormorant.variable} ${dmSans.variable} ${dekko.variable}`}
-    >
+    <html lang="pt-BR" className={poppins.variable}>
       <body className="min-h-screen flex flex-col antialiased">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <AuthProvider>
+          <SmoothScroll />
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );

@@ -1,6 +1,7 @@
 import { getProduct, getProducts } from "@/lib/products";
 import { notFound } from "next/navigation";
 import { AddToCartButton } from "./AddToCartButton";
+import { ProductGallery } from "./ProductGallery";
 
 export async function generateStaticParams() {
   const products = await getProducts();
@@ -17,76 +18,48 @@ export default async function ProductPage(props: PageProps<"/pecas/[slug]">) {
     <div className="pt-28 pb-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
-          <div className="space-y-4">
-            <div className="aspect-square bg-peonia/30 rounded-3xl overflow-hidden">
-              {product.image_url ? (
-                <img
-                  src={product.image_url}
-                  alt={product.name}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center">
-                  <span className="font-display text-burgundy/15 text-6xl">
-                    cacali
-                  </span>
-                </div>
-              )}
-            </div>
-            {product.images.length > 0 && (
-              <div className="grid grid-cols-3 gap-4">
-                {product.images.map((img, i) => (
-                  <div
-                    key={i}
-                    className="aspect-square bg-peonia/20 rounded-xl overflow-hidden"
-                  >
-                    <img
-                      src={img}
-                      alt={`${product.name} ${i + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+          <ProductGallery
+            mainImage={product.image_url}
+            images={product.images}
+            name={product.name}
+          />
 
           <div className="md:sticky md:top-28 md:self-start space-y-6">
-            <h1 className="font-display text-3xl md:text-4xl font-light text-burgundy">
+            <h1 className="text-3xl md:text-4xl font-bold text-marrom tracking-tight">
               {product.name}
             </h1>
-            <p className="text-burgundy/60">{product.hook}</p>
+            <p className="text-marrom/60">{product.hook}</p>
 
-            <div className="text-burgundy/80 leading-relaxed whitespace-pre-line text-sm">
+            <div className="text-marrom/80 leading-relaxed whitespace-pre-line text-sm">
               {product.description}
             </div>
 
-            <div className="text-sm text-burgundy/50 space-y-1">
+            <div className="text-sm text-marrom/50 space-y-1">
               <p>{product.material}</p>
               <p>{product.dimensions}</p>
             </div>
 
-            <div className="bg-peonia/30 rounded-xl p-4 space-y-2">
-              <p className="text-xs text-burgundy/60">
-                peca unica — esta foto e esta peca.
+            <div className="bg-bege/30 rounded-xl p-4 space-y-2">
+              <p className="text-xs text-marrom/60">
+                peça única — esta foto é esta peça.
               </p>
               {product.extras && (
-                <p className="text-xs text-burgundy/60">{product.extras}</p>
+                <p className="text-xs text-marrom/60">{product.extras}</p>
               )}
             </div>
 
             {product.sold ? (
               <div className="space-y-4">
-                <p className="font-display text-2xl text-burgundy/40 italic">
-                  essa ja foi.
+                <p className="text-2xl font-bold text-marrom/40">
+                  essa já foi.
                 </p>
-                <p className="text-sm text-burgundy/40">
-                  encontrou alguem. nao tinha outra igual — e nao vai ter.
+                <p className="text-sm text-marrom/40">
+                  encontrou alguém. não tinha outra igual — e não vai ter.
                 </p>
               </div>
             ) : (
               <div className="space-y-4">
-                <p className="font-display text-3xl text-burgundy">
+                <p className="text-3xl font-bold text-marrom">
                   R$ {product.price.toFixed(2).replace(".", ",")}
                 </p>
                 <AddToCartButton product={product} />

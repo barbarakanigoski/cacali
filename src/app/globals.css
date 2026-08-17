@@ -1,30 +1,56 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-burgundy: #770523;
-  --color-fucsia: #D81A67;
-  --color-blood-orange: #DD4E28;
-  --color-peonia: #FAD2E1;
-  --color-pistache: #D0D996;
-  --color-creme: #FAF4EE;
-  --color-creme-dark: #F0E8DE;
+  --color-marrom: #5A1B09;
+  --color-marrom-light: #7A3B20;
+  --color-bege: #E1C3A6;
+  --color-rosa-antigo: #CC8083;
+  --color-pink: #E63B6F;
+  --color-creme: #FFF8F2;
+  --color-white: #FFFFFF;
 
-  --font-display: var(--font-cormorant);
-  --font-body: var(--font-dm-sans);
-  --font-curved: var(--font-dekko);
+  --font-display: var(--font-poppins);
+  --font-body: var(--font-poppins);
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-marquee2: marquee2 40s linear infinite;
 }
 
-html {
-  scroll-behavior: smooth;
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
 }
 
 body {
   background-color: var(--color-creme);
-  color: var(--color-burgundy);
-  font-family: var(--font-body);
+  color: var(--color-marrom);
+  font-family: var(--font-poppins);
 }
 
 ::selection {
-  background-color: var(--color-peonia);
-  color: var(--color-burgundy);
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+
+/* Jitter-style smooth transitions */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Marquee ticker */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes marquee2 {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
 }

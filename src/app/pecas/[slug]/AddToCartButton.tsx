@@ -19,7 +19,7 @@ export function AddToCartButton({ product }: { product: Product }) {
   return (
     <button
       onClick={handleClick}
-      className="w-full bg-burgundy text-creme py-4 text-sm tracking-wide hover:bg-fucsia transition-colors rounded-full"
+      className="w-full bg-marrom text-creme py-4 text-sm tracking-wide hover:bg-pink transition-colors rounded-full"
     >
       {inCart ? "ver sacola" : "adicionar a sacola"}
     </button>

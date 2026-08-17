@@ -40,7 +40,7 @@ export function CartDrawer() {
     <>
       {isOpen && (
         <div
-          className="fixed inset-0 bg-burgundy/30 backdrop-blur-sm z-50"
+          className="fixed inset-0 bg-marrom/30 backdrop-blur-sm z-50"
           onClick={closeCart}
         />
       )}
@@ -50,13 +50,13 @@ export function CartDrawer() {
         }`}
       >
         <div className="flex flex-col h-full">
-          <div className="flex items-center justify-between p-6 border-b border-burgundy/10">
-            <h2 className="font-display text-xl font-light text-burgundy">
+          <div className="flex items-center justify-between p-6 border-b border-marrom/10">
+            <h2 className="font-display text-xl font-light text-marrom">
               sua sacola
             </h2>
             <button
               onClick={closeCart}
-              className="text-burgundy/50 hover:text-burgundy transition-colors"
+              className="text-marrom/50 hover:text-marrom transition-colors"
               aria-label="fechar sacola"
             >
               <X size={20} />
@@ -65,7 +65,7 @@ export function CartDrawer() {
 
           <div className="flex-1 overflow-y-auto p-6">
             {items.length === 0 ? (
-              <p className="text-burgundy/50 text-sm text-center mt-12">
+              <p className="text-marrom/50 text-sm text-center mt-12">
                 sua sacola esta vazia.
               </p>
             ) : (
@@ -76,7 +76,7 @@ export function CartDrawer() {
                     className="flex gap-4 items-start"
                   >
                     <div
-                      className="w-20 h-20 bg-peonia/50 rounded-lg flex-shrink-0 bg-cover bg-center"
+                      className="w-20 h-20 bg-bege/50 rounded-lg flex-shrink-0 bg-cover bg-center"
                       style={{
                         backgroundImage: item.product.image_url
                           ? `url(${item.product.image_url})`
@@ -84,19 +84,19 @@ export function CartDrawer() {
                       }}
                     />
                     <div className="flex-1 min-w-0">
-                      <p className="font-display text-sm text-burgundy">
+                      <p className="font-display text-sm text-marrom">
                         {item.product.name}
                       </p>
-                      <p className="text-xs text-burgundy/50 mt-1">
-                        peca unica
+                      <p className="text-xs text-marrom/50 mt-1">
+                        peça única
                       </p>
-                      <p className="text-sm font-medium text-burgundy mt-2">
+                      <p className="text-sm font-medium text-marrom mt-2">
                         R$ {item.product.price.toFixed(2).replace(".", ",")}
                       </p>
                     </div>
                     <button
                       onClick={() => removeItem(item.product.id)}
-                      className="text-burgundy/30 hover:text-fucsia transition-colors"
+                      className="text-marrom/30 hover:text-pink transition-colors"
                       aria-label="remover item"
                     >
                       <Trash2 size={16} />
@@ -108,8 +108,8 @@ export function CartDrawer() {
           </div>
 
           {items.length > 0 && (
-            <div className="p-6 border-t border-burgundy/10 space-y-4">
-              <div className="flex justify-between text-burgundy">
+            <div className="p-6 border-t border-marrom/10 space-y-4">
+              <div className="flex justify-between text-marrom">
                 <span className="text-sm">total</span>
                 <span className="font-display text-lg">
                   R$ {total().toFixed(2).replace(".", ",")}
@@ -118,11 +118,11 @@ export function CartDrawer() {
               <button
                 onClick={handleCheckout}
                 disabled={loading}
-                className="w-full bg-burgundy text-creme py-3.5 text-sm tracking-wide hover:bg-fucsia transition-colors disabled:opacity-50 rounded-full"
+                className="w-full bg-marrom text-creme py-3.5 text-sm tracking-wide hover:bg-pink transition-colors disabled:opacity-50 rounded-full"
               >
                 {loading ? "processando..." : "finalizar pedido"}
               </button>
-              <p className="text-[11px] text-burgundy/40 text-center">
+              <p className="text-[11px] text-marrom/40 text-center">
                 pagamento seguro via mercado pago
               </p>
             </div>
