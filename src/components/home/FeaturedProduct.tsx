@@ -89,7 +89,7 @@ export function FeaturedProduct({ product }: { product: Product | null }) {
           </span>
         </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-16 items-center mt-6">
           <AnimateOnScroll animation="fadeLeft" delay={0.1}>
             <div className="aspect-square bg-bege/30 rounded-3xl overflow-hidden group">
               {product.image_url ? (

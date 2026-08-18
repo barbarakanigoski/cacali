@@ -74,7 +74,7 @@ export function Header() {
       <header className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: v.header_bg }}>
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center" style={{ height: `${v.header_height}px` }}>
           {/* Desktop nav */}
-          <div className="flex-1 items-center gap-8 hidden md:flex">
+          <div className="flex-1 items-center gap-4 lg:gap-8 hidden md:flex">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} className="text-sm font-semibold hover:opacity-100 transition-opacity" style={{ color: v.header_link_color }}>
                 {link.label}
@@ -100,7 +100,7 @@ export function Header() {
           {/* Logo */}
           <div className="relative flex items-center">
             <Link href="/">
-              <Image src={v.header_logo_image} alt="cacali cerâmica artesanal" width={180} height={50} className="h-8 sm:h-12 w-auto brightness-0 invert" />
+              <Image src={v.header_logo_image} alt="cacali cerâmica artesanal" width={180} height={50} className="h-8 sm:h-10 md:h-12 w-auto brightness-0 invert" />
             </Link>
             <AdminEditButton onClick={() => setEditing(true)} position="inline" />
           </div>

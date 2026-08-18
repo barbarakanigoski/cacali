@@ -45,7 +45,7 @@ export function CartDrawer() {
         />
       )}
       <div
-        className={`fixed top-0 right-0 h-full w-full max-w-md bg-creme z-50 shadow-2xl transform transition-transform duration-300 ease-out ${
+        className={`fixed top-0 right-0 h-full w-full sm:max-w-sm md:max-w-md bg-creme z-50 shadow-2xl transform transition-transform duration-300 ease-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

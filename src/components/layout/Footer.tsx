@@ -64,9 +64,9 @@ export function Footer() {
     <footer className="relative" style={{ backgroundColor: v.footer_bg, color: v.footer_text_color }}>
       <AdminEditButton onClick={() => setEditing(true)} />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 lg:gap-x-16 gap-y-8 sm:gap-y-10">
-          <div className="col-span-2 lg:col-span-1">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-10 md:pt-14 lg:pt-16 pb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-6 md:gap-x-10 lg:gap-x-16 gap-y-8 sm:gap-y-10">
+          <div className="col-span-1 sm:col-span-2 md:col-span-1">
             <h3 className="font-bold text-lg mb-5">Sobre</h3>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: `${v.footer_text_color}b3` }}>
               {v.about_text}

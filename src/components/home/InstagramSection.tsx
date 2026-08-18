@@ -79,7 +79,7 @@ export function InstagramSection() {
           </p>
         </AnimateOnScroll>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-8 sm:mt-12">
           {[1, 2, 3, 4].map((i) => (
             <AnimateOnScroll key={i} animation="scaleUp" delay={i * 0.1}>
               <div className="aspect-square bg-bege/30 rounded-2xl flex items-center justify-center border border-marrom/5 hover:border-pink/20 hover:shadow-lg transition-all duration-300">

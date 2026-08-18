@@ -56,7 +56,7 @@ export default function SobrePage() {
       </section>
 
       {/* cacau */}
-      <section className="bg-bege py-14 sm:py-24">
+      <section className="bg-bege py-14 md:py-20 lg:py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1 space-y-6">
@@ -95,7 +95,7 @@ export default function SobrePage() {
       </section>
 
       {/* virada */}
-      <section className="bg-marrom text-creme py-14 sm:py-24">
+      <section className="bg-marrom text-creme py-14 md:py-20 lg:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center space-y-6">
           <p className="font-display text-xl sm:text-2xl md:text-3xl font-light leading-relaxed">
             e sim — eu sei que é uma xícara superfaturada.
@@ -112,7 +112,7 @@ export default function SobrePage() {
       </section>
 
       {/* pra quem e */}
-      <section className="max-w-3xl mx-auto px-4 sm:px-6 py-14 sm:py-24 text-center">
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 py-14 md:py-20 lg:py-24 text-center">
         <p className="font-display text-2xl font-light text-marrom mb-8">
           compra cacali quem:
         </p>
