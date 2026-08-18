@@ -26,9 +26,9 @@ export default function ContatoPage() {
   }
 
   return (
-    <div className="pt-32 pb-24">
-      <div className="max-w-xl mx-auto px-6">
-        <h1 className="font-display text-5xl font-light text-marrom text-center">
+    <div className="pt-24 sm:pt-32 pb-16 sm:pb-24">
+      <div className="max-w-xl mx-auto px-4 sm:px-6">
+        <h1 className="font-display text-3xl sm:text-5xl font-light text-marrom text-center">
           fala comigo.
         </h1>
         <p className="text-marrom/50 text-center mt-4">

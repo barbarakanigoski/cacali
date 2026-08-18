@@ -73,11 +73,11 @@ export function MiniAbout() {
   }
 
   return (
-    <section className="relative" style={{ backgroundColor: v.about_bg, paddingTop: `${v.about_padding}px`, paddingBottom: `${v.about_padding}px` }}>
+    <section className="relative" style={{ backgroundColor: v.about_bg, paddingTop: `clamp(48px, 10vw, ${v.about_padding}px)`, paddingBottom: `clamp(48px, 10vw, ${v.about_padding}px)` }}>
       <AdminEditButton onClick={() => setEditing(true)} />
 
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <AnimateOnScroll animation="fadeLeft">
             <div className="aspect-[3/4] rounded-3xl overflow-hidden bg-bege/60 relative">
               {v.about_image ? (
@@ -94,7 +94,7 @@ export function MiniAbout() {
               <span className="inline-block text-xs tracking-widest uppercase font-bold px-3 py-1.5 rounded-full" style={{ color: v.about_badge_color, backgroundColor: v.about_badge_bg }}>
                 {v.about_badge}
               </span>
-              <h2 className="font-bold tracking-tight leading-tight" style={{ fontSize: `${v.about_title_size}px`, color: v.about_title_color }}>
+              <h2 className="font-bold tracking-tight leading-tight" style={{ fontSize: `clamp(24px, 5vw, ${v.about_title_size}px)`, color: v.about_title_color }}>
                 {v.about_title}
               </h2>
               <p className="text-lg leading-relaxed" style={{ color: v.about_subtitle_color }}>

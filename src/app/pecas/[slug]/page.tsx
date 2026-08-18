@@ -15,9 +15,9 @@ export default async function ProductPage(props: PageProps<"/pecas/[slug]">) {
   if (!product) notFound();
 
   return (
-    <div className="pt-28 pb-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+    <div className="pt-24 sm:pt-28 pb-16 sm:pb-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20">
           <ProductGallery
             mainImage={product.image_url}
             images={product.images}

@@ -5,10 +5,10 @@ import Image from "next/image";
 
 export default function EnviadoPage() {
   return (
-    <div className="pt-32 pb-24 min-h-screen flex items-center">
-      <div className="max-w-lg mx-auto px-6 text-center">
+    <div className="pt-24 sm:pt-32 pb-16 sm:pb-24 min-h-screen flex items-center">
+      <div className="max-w-lg mx-auto px-4 sm:px-6 text-center">
         <Image src="/icon-cacau.png" alt="cacau" width={80} height={80} className="mx-auto mb-6" />
-        <h1 className="font-display text-4xl md:text-5xl font-light text-marrom">
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-light text-marrom">
           pedido recebido.
         </h1>
         <p className="text-marrom/50 mt-6 max-w-sm mx-auto">

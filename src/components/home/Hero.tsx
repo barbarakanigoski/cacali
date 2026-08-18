@@ -88,7 +88,7 @@ export function Hero() {
   return (
     <section
       className="relative flex items-center justify-center overflow-hidden pt-20"
-      style={{ paddingTop: `${parseInt(v.hero_padding)}px`, paddingBottom: `${parseInt(v.hero_padding) - 32}px` }}
+      style={{ paddingTop: `clamp(60px, 12vw, ${parseInt(v.hero_padding)}px)`, paddingBottom: `clamp(40px, 10vw, ${parseInt(v.hero_padding) - 32}px)` }}
     >
       <AdminEditButton onClick={() => setEditing(true)} />
 
@@ -98,7 +98,7 @@ export function Hero() {
       />
       <div className="absolute inset-0" style={{ backgroundColor: v.hero_overlay_color, opacity: parseInt(v.hero_overlay_opacity) / 100 }} />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
         <motion.div
           className="flex justify-center mb-8"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -110,7 +110,7 @@ export function Hero() {
 
         <motion.h1
           className="leading-[1.05] tracking-tight drop-shadow-lg"
-          style={{ fontSize: `${v.hero_title_size}px`, fontWeight: v.hero_title_weight, color: v.hero_title_color }}
+          style={{ fontSize: `clamp(32px, 8vw, ${v.hero_title_size}px)`, fontWeight: v.hero_title_weight, color: v.hero_title_color }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
@@ -128,8 +128,8 @@ export function Hero() {
         </motion.h1>
 
         <motion.p
-          className="mt-6 max-w-lg mx-auto font-light drop-shadow-md"
-          style={{ fontSize: `${v.hero_subtitle_size}px`, color: v.hero_subtitle_color }}
+          className="mt-4 sm:mt-6 max-w-lg mx-auto font-light drop-shadow-md"
+          style={{ fontSize: `clamp(16px, 4vw, ${v.hero_subtitle_size}px)`, color: v.hero_subtitle_color }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7, ease: [0.25, 0.1, 0.25, 1] }}

@@ -8,13 +8,13 @@ export const metadata = {
 
 export default function SobrePage() {
   return (
-    <div className="pt-28 pb-24">
+    <div className="pt-24 sm:pt-28 pb-16 sm:pb-24">
       {/* hero */}
-      <section className="max-w-3xl mx-auto px-6 text-center py-16">
-        <h1 className="font-display text-5xl md:text-6xl font-light text-marrom">
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 text-center py-10 sm:py-16">
+        <h1 className="font-display text-3xl sm:text-5xl md:text-6xl font-light text-marrom">
           toda cerâmica tem uma origem.
         </h1>
-        <p className="font-display text-xl md:text-2xl font-light text-marrom/60 mt-6 italic">
+        <p className="font-display text-lg sm:text-xl md:text-2xl font-light text-marrom/60 mt-4 sm:mt-6 italic">
           essa começa com ansiedade,
           <br />
           argila é uma cachorra chamada cacau.
@@ -22,8 +22,8 @@ export default function SobrePage() {
       </section>
 
       {/* barbara */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="aspect-[3/4] bg-bege/40 rounded-3xl flex items-center justify-center">
             <span className="font-display text-marrom/20 text-3xl italic">
               foto da barbara
@@ -56,9 +56,9 @@ export default function SobrePage() {
       </section>
 
       {/* cacau */}
-      <section className="bg-bege py-24">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <section className="bg-bege py-14 sm:py-24">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1 space-y-6">
               <h2 className="font-display text-3xl font-light text-marrom">
                 e a inspiração por trás
@@ -95,9 +95,9 @@ export default function SobrePage() {
       </section>
 
       {/* virada */}
-      <section className="bg-marrom text-creme py-24">
-        <div className="max-w-3xl mx-auto px-6 text-center space-y-6">
-          <p className="font-display text-2xl md:text-3xl font-light leading-relaxed">
+      <section className="bg-marrom text-creme py-14 sm:py-24">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center space-y-6">
+          <p className="font-display text-xl sm:text-2xl md:text-3xl font-light leading-relaxed">
             e sim — eu sei que é uma xícara superfaturada.
           </p>
           <p className="text-creme/70 leading-relaxed">
@@ -112,7 +112,7 @@ export default function SobrePage() {
       </section>
 
       {/* pra quem e */}
-      <section className="max-w-3xl mx-auto px-6 py-24 text-center">
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 py-14 sm:py-24 text-center">
         <p className="font-display text-2xl font-light text-marrom mb-8">
           compra cacali quem:
         </p>

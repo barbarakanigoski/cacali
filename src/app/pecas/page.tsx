@@ -11,10 +11,10 @@ export default async function PecasPage() {
   const products = await getProducts();
 
   return (
-    <div className="pt-32 pb-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h1 className="font-display text-5xl md:text-6xl font-light text-marrom">
+    <div className="pt-24 sm:pt-32 pb-16 sm:pb-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-10 sm:mb-16">
+          <h1 className="font-display text-3xl sm:text-5xl md:text-6xl font-light text-marrom">
             cada peça e única.
           </h1>
           <p className="text-marrom/50 mt-4 max-w-lg mx-auto">
@@ -29,7 +29,7 @@ export default async function PecasPage() {
         </div>
 
         {products.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

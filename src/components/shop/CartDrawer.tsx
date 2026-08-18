@@ -96,10 +96,10 @@ export function CartDrawer() {
                     </div>
                     <button
                       onClick={() => removeItem(item.product.id)}
-                      className="text-marrom/30 hover:text-pink transition-colors"
+                      className="text-marrom/30 hover:text-pink transition-colors p-2 -mr-2"
                       aria-label="remover item"
                     >
-                      <Trash2 size={16} />
+                      <Trash2 size={18} />
                     </button>
                   </div>
                 ))}

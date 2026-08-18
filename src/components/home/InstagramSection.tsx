@@ -66,12 +66,12 @@ export function InstagramSection() {
   }
 
   return (
-    <section className="relative" style={{ backgroundColor: v.instagram_bg, paddingTop: `${v.instagram_padding}px`, paddingBottom: `${v.instagram_padding}px` }}>
+    <section className="relative" style={{ backgroundColor: v.instagram_bg, paddingTop: `clamp(48px, 10vw, ${v.instagram_padding}px)`, paddingBottom: `clamp(48px, 10vw, ${v.instagram_padding}px)` }}>
       <AdminEditButton onClick={() => setEditing(true)} />
 
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
         <AnimateOnScroll animation="fadeUp">
-          <h2 className="font-bold tracking-tight" style={{ fontSize: `${v.instagram_title_size}px`, color: v.instagram_title_color }}>
+          <h2 className="font-bold tracking-tight" style={{ fontSize: `clamp(28px, 6vw, ${v.instagram_title_size}px)`, color: v.instagram_title_color }}>
             {v.instagram_title}
           </h2>
           <p className="mt-4 text-lg" style={{ color: v.instagram_subtitle_color }}>

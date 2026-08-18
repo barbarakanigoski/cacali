@@ -76,10 +76,10 @@ export function FeaturedProduct({ product }: { product: Product | null }) {
   }
 
   return (
-    <section className="relative" style={{ backgroundColor: v.featured_bg, paddingTop: `${v.featured_padding}px`, paddingBottom: `${v.featured_padding}px` }}>
+    <section className="relative" style={{ backgroundColor: v.featured_bg, paddingTop: `clamp(48px, 10vw, ${v.featured_padding}px)`, paddingBottom: `clamp(48px, 10vw, ${v.featured_padding}px)` }}>
       <AdminEditButton onClick={() => setEditing(true)} />
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <AnimateOnScroll animation="fadeUp">
           <span
             className="inline-block text-xs tracking-widest uppercase font-bold mb-4 px-3 py-1.5 rounded-full"
@@ -104,7 +104,7 @@ export function FeaturedProduct({ product }: { product: Product | null }) {
             <div className="space-y-6">
               <h2
                 className="font-bold tracking-tight leading-tight"
-                style={{ fontSize: `${v.featured_title_size}px`, color: v.featured_title_color }}
+                style={{ fontSize: `clamp(28px, 6vw, ${v.featured_title_size}px)`, color: v.featured_title_color }}
               >
                 {product.name}
               </h2>

@@ -68,20 +68,20 @@ export function ClosingPhrase() {
         backgroundImage: `url(${v.closing_bg_image})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        paddingTop: `${v.closing_padding}px`,
-        paddingBottom: `${v.closing_padding}px`,
+        paddingTop: `clamp(48px, 10vw, ${v.closing_padding}px)`,
+        paddingBottom: `clamp(48px, 10vw, ${v.closing_padding}px)`,
       }}
     >
       <AdminEditButton onClick={() => setEditing(true)} />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <AnimateOnScroll animation="blur" duration={1}>
-          <p className="font-bold tracking-tight leading-tight drop-shadow-lg" style={{ fontSize: `${v.closing_title_size}px`, color: v.closing_title_color }}>
+          <p className="font-bold tracking-tight leading-tight drop-shadow-lg" style={{ fontSize: `clamp(28px, 7vw, ${v.closing_title_size}px)`, color: v.closing_title_color }}>
             {v.closing_title}
           </p>
         </AnimateOnScroll>
         <AnimateOnScroll animation="fadeUp" delay={0.3}>
-          <p className="font-medium mt-6 drop-shadow-md" style={{ fontSize: `${v.closing_subtitle_size}px`, color: v.closing_subtitle_color }}>
+          <p className="font-medium mt-4 sm:mt-6 drop-shadow-md" style={{ fontSize: `clamp(14px, 3.5vw, ${v.closing_subtitle_size}px)`, color: v.closing_subtitle_color }}>
             {v.closing_subtitle}
           </p>
         </AnimateOnScroll>

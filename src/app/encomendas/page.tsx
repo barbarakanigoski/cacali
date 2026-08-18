@@ -77,9 +77,9 @@ export default function EncomendasPage() {
   }
 
   return (
-    <div className="pt-32 pb-24">
-      <div className="max-w-2xl mx-auto px-6">
-        <h1 className="font-display text-5xl font-light text-marrom text-center">
+    <div className="pt-24 sm:pt-32 pb-16 sm:pb-24">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+        <h1 className="font-display text-3xl sm:text-5xl font-light text-marrom text-center">
           encomendas.
         </h1>
         <p className="text-marrom/50 text-center mt-4 max-w-md mx-auto">
@@ -114,7 +114,7 @@ export default function EncomendasPage() {
               </div>
             </div>
 
-            <div className="sm:w-1/2">
+            <div className="w-full sm:w-1/2">
               <label className="text-sm text-marrom/60 block mb-2">
                 whatsapp <span className="text-marrom/30">(opcional)</span>
               </label>

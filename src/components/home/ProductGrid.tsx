@@ -69,12 +69,12 @@ export function ProductGrid({ products }: { products: Product[] }) {
   }
 
   return (
-    <section className="relative" style={{ backgroundColor: v.grid_bg, paddingTop: `${v.grid_padding}px`, paddingBottom: `${v.grid_padding}px` }}>
+    <section className="relative" style={{ backgroundColor: v.grid_bg, paddingTop: `clamp(48px, 10vw, ${v.grid_padding}px)`, paddingBottom: `clamp(48px, 10vw, ${v.grid_padding}px)` }}>
       <AdminEditButton onClick={() => setEditing(true)} />
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <AnimateOnScroll animation="fadeUp" className="text-center mb-16">
-          <h2 className="font-bold tracking-tight" style={{ fontSize: `${v.grid_title_size}px`, color: v.grid_title_color }}>
+          <h2 className="font-bold tracking-tight" style={{ fontSize: `clamp(28px, 6vw, ${v.grid_title_size}px)`, color: v.grid_title_color }}>
             {v.grid_title}
           </h2>
           <p className="mt-4 max-w-lg mx-auto text-lg" style={{ color: v.grid_subtitle_color }}>
